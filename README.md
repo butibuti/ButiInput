@@ -1,0 +1,2 @@
+# ButiInput
+XInput&amp;DirectInputのラッパーライブラリ
