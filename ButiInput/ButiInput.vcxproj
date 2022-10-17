@@ -127,7 +127,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>$(SolutionDir)\Libs\lib\$(Configuration)\ButiUtil.lib;$(SolutionDir)\Libs\dll\$(Configuration)\ButiMemorySystem.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)\Libs\lib\$(Configuration)\ButiUtil.lib;$(SolutionDir)\Libs\dll\$(Configuration)\ButiMemorySystem.lib;$(SolutionDir)\Libs\dll\$(Configuration)\ZDll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(SolutionDir)Libs\dll\$(Configuration)" "$(SolutionDir)output\$(Configuration)"</Command>
@@ -152,7 +152,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>$(SolutionDir)\Libs\lib\$(Configuration)\ButiUtil.lib;$(SolutionDir)\Libs\dll\$(Configuration)\ButiMemorySystem.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)\Libs\lib\$(Configuration)\ButiUtil.lib;$(SolutionDir)\Libs\dll\$(Configuration)\ButiMemorySystem.lib;$(SolutionDir)\Libs\dll\$(Configuration)\ZDll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(SolutionDir)Libs\dll\$(Configuration)" "$(SolutionDir)output\$(Configuration)"</Command>

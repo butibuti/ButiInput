@@ -10,6 +10,10 @@
 #include<cstdint>
 #include"ButiMath/ButiMath.h"
 #include"ButiMemorySystem/ButiMemorySystem/ButiPtr.h"
+#include"ButiMemorySystem/ButiMemorySystem/ButiList.h"
+namespace ButiEngine {
+class IBinaryReader;
+}
 namespace ButiInput {
 
 enum class PadButtons {
@@ -51,8 +55,7 @@ public:
 	virtual bool CheckAnyKey()const = 0;
 	virtual bool TriggerAnyKey()const = 0;
 	virtual bool ReleaseAnyKey()const = 0;
-	virtual void PadUpdate()= 0;
-	virtual void MouseUpdate()= 0;
+	virtual void Update()= 0;
 	virtual bool GetAnyButton()const = 0;
 	virtual bool GetAnyButtonTrigger()const = 0;
 	virtual bool GetPadButton(const PadButtons arg_button)const =0;
@@ -74,6 +77,13 @@ public:
 	virtual ButiEngine::Vector2 GetMousePos()const = 0;
 	virtual void SetIsWindowActive(const bool arg_windowActive) = 0;
 	virtual void SetMouseCursor(const ButiEngine::Vector2& arg_position)= 0;
+	virtual void StartRec() = 0;
+	virtual void StopRec() = 0;
+	virtual void Replay(const ButiEngine::List< const void* >&arg_list_data,const ButiEngine::List<std::int64_t>& arg_list_dataSize) = 0;
+	virtual void Replay(const std::string& arg_logDir) = 0;
+	virtual void SetLogFileDir(const std::string& arg_fileDir) = 0;
+	virtual void ReplayStop() = 0;
+	virtual bool IsReplay() = 0;
 private:
 };
 BUTIINPUT_API ButiEngine::Value_ptr<IInputManager> CreateInputManager(const void* arg_hwnd);
