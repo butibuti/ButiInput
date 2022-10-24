@@ -123,7 +123,7 @@ public:
 	bool GetPadButtonRelease(const PadButtons arg_button)const override;
 	bool GetMouseButton(const MouseButtons arg_button)const override;
 	bool GetMouseTrigger(const MouseButtons arg_button)const override;
-	bool GetMouseReleaseTrigger(const MouseButtons arg_button)const override;
+	bool GetMouseRelease(const MouseButtons arg_button)const override;
 	bool GetMouseWheel()const override;
 	float GetMouseWheelMove()const override;
 	void SetCursorHide(const bool arg_isCursorHide)override;
@@ -388,7 +388,7 @@ bool InputManager::GetMouseTrigger(const MouseButtons arg_button) const
 	return (m_befInput.mouseState.mouseState.rgbButtons[static_cast<std::int32_t>(arg_button)] != char_max) && m_currentInput.mouseState.mouseState.rgbButtons[static_cast<std::int32_t>(arg_button)] == char_max;
 
 }
-bool InputManager::GetMouseReleaseTrigger(const MouseButtons arg_button) const
+bool InputManager::GetMouseRelease(const MouseButtons arg_button) const
 {
 	return (m_befInput.mouseState.mouseState.rgbButtons[static_cast<std::int32_t>(arg_button)] == char_max) && m_currentInput.mouseState.mouseState.rgbButtons[static_cast<std::int32_t>(arg_button)] != char_max;
 

@@ -63,7 +63,7 @@ public:
 	virtual bool GetPadButtonRelease(const PadButtons arg_button)const= 0;
 	virtual bool GetMouseButton(const MouseButtons arg_button)const = 0;
 	virtual bool GetMouseTrigger(const MouseButtons arg_button)const = 0;
-	virtual bool GetMouseReleaseTrigger(const MouseButtons arg_button)const = 0;
+	virtual bool GetMouseRelease(const MouseButtons arg_button)const = 0;
 	virtual bool GetMouseWheel()const = 0;
 	virtual float GetMouseWheelMove()const = 0;
 	virtual void SetCursorHide(const bool arg_isCursorHide)= 0;
